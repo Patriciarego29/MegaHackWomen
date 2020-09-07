@@ -5,6 +5,10 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import menu from '../icones/menu.png';
 import user from '../icones/user.png';
 import map from '../img/map.png';
+import amigo from '../icones/user(1).png';
+import lupa from '../icones/search.png';
+import mais from '../icones/plus.png';
+import camera from '../icones/photograph.png';
 
 export default function RedeBme({ navigation }) {
     async function redirecionaMenu() {
@@ -24,6 +28,32 @@ export default function RedeBme({ navigation }) {
                 <Text style={styles.titulo}>Rede BME</Text>
             </View>
             <Image style={styles.map} source={map} />
+            <View style={styles.icones}>
+                <View style={styles.elementosIcone}>
+                    <View style={styles.containerIcone}>
+                        <Image source={lupa} style={styles.icone} />
+                    </View>
+                    <Text style={styles.textoIcone}>Pesquisar</Text>
+                </View>
+                <View style={styles.elementosIcone}>
+                    <View style={styles.containerIcone}>
+                        <Image source={camera} style={styles.icone} />
+                    </View>
+                    <Text style={styles.textoIcone}>Fotos</Text>
+                </View>
+                <View style={styles.elementosIcone}>
+                    <View style={styles.containerIcone}>
+                        <Image source={mais} style={styles.icone} />
+                    </View>
+                    <Text style={styles.textoIcone}>Create</Text>
+                </View>
+                <View style={styles.elementosIcone}>
+                    <View style={styles.containerIcone}>
+                        <Image source={amigo} style={styles.icone} />
+                    </View>
+                    <Text style={styles.textoIcone}>Amigos</Text>
+                </View>
+            </View>
         </View>
     );
 }
@@ -81,5 +111,37 @@ const styles = StyleSheet.create({
         width: 400,
         height: 350,
     },
+
+    icones: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginHorizontal: 40,
+    },
+
+    elementosIcone: {
+        flexDirection: 'column',
+    },
+
+    containerIcone: {
+        borderWidth: 2,
+        borderColor: '#462B72',
+        borderRadius: 50,
+        width: 50,
+        height: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    icone: {
+        width: 30,
+        height: 30,
+    },
+
+    textoIcone: {
+        fontSize: 15,
+        alignSelf: 'center',
+    },
+
 });
 
