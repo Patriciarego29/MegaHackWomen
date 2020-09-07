@@ -1,14 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Picker, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native';
 
 import maria from '../img/MARIA_-_BME_1.png';
 
 export default function Cadastro({ navigation }) {
-    const [selectedValue, setSelectedValue] = React.useState('');
-
     async function redirecionaPageInicial() {
-        navigation.navigate('../navegacaoTab');
+        navigation.navigate('Navegacao');
     }
 
     return (
@@ -78,16 +76,6 @@ export default function Cadastro({ navigation }) {
                             keyboardType="numeric"
                         />
                         <Text style={styles.label}>Segmento do seu negócio</Text>
-                        <View style={styles.input}>
-                            <Picker
-                                selectedValue={selectedValue}
-                                onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-                            >
-                                <Picker.Item label="Selecione" value="" />
-                                <Picker.Item label="Alimenticio" value="alimenticio" />
-                                <Picker.Item label="Varejo" value="varejo" />
-                            </Picker>
-                        </View>
                     </View>
                     <View style={styles.containerMaria}>
                         <Image style={styles.image} source={maria} />

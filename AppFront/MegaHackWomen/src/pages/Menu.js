@@ -2,10 +2,10 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-export default function Notificacoes() {
+export default function Menu() {
     return (
         <View>
-            <Text>Notificacoes</Text>
+            <Text>Menu</Text>
         </View>
     );
 }

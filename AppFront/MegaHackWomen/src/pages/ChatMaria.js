@@ -4,6 +4,8 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 export default function ChatMaria() {
     return (
-        <View/>
+        <View>
+            <Text>Maria</Text>
+        </View>
     );
 }
